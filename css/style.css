@@ -28,7 +28,7 @@ main {
 }
 
 header {
-    background: linear-gradient(#9c968d, #39312d);
+    background: linear-gradient(#9c8973, #2c2623);
     display: flex;
     align-items: center;
     padding: 5px 25px 10px;
@@ -123,8 +123,8 @@ div.col {
 }
 
 .row {
-    gap: 10px;
-    column-gap: 20px;
+    gap: 11px;
+    column-gap: 15px;
 }
 
 .card-body {
@@ -135,7 +135,7 @@ div.col {
 
 .icon-card {
     filter: invert(1);
-    width: 20px;
+    height: 18px;
     margin-right: 5px;
 }
 
@@ -150,7 +150,7 @@ div.col {
     height: 16px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 570px) {
     header {
         flex-direction: column;
         text-align: center;
