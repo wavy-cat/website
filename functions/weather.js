@@ -1,7 +1,7 @@
 export async function onRequest(context) {
     const api_key = await context.env.SECRETS.get("API_KEY");
     const city_name = await context.env.SECRETS.get("CITY_NAME");
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${api_key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&units=metric&lang=en&appid=${api_key}`;
 
     try {
         const response = await fetch(url);
