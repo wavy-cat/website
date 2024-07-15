@@ -10,8 +10,8 @@ export async function onRequest(context) {
             return new Response("Error fetching weather data", {status: 500});
         }
 
-        const {main, weather} = await response.json();
-        const data = {main: main[0], weather};
+        const {weather, main} = await response.json();
+        const data = {main: main, weather: weather[0]};
 
         return new Response(JSON.stringify(data));
     } catch (error) {
