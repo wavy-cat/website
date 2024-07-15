@@ -13,9 +13,11 @@ export async function onRequest(context) {
         const {weather, main} = await response.json();
         const data = {main: main, weather: weather[0]};
 
-        return new Response(JSON.stringify(data));
+        return new Response(JSON.stringify(data), {
+            headers: {'Content-Type': 'application/json'}
+        });
     } catch (error) {
         console.error(error);
-        return new Response("Error occurred while fetching weather data");
+        return new Response("Error occurred while fetching weather data", {status: 500});
     }
 }
