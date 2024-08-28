@@ -36,6 +36,11 @@ p, h2 {
 .icon {
     width: 2.4rem;
     filter: invert(0.16);
+    transition: filter 0.2s;
+}
+
+.icon:hover {
+    filter: invert(0.24);
 }
 
 .social {
