@@ -1,16 +1,31 @@
-function getWakatimeData() {
-    const wakatimeElement = document.getElementById("hrs");
-
-    const url = 'https://wakatime.com/share/@wavycat/204b5063-e1b5-4014-a7d6-0f9b2af08d07.json';
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-        wakatimeElement.innerHTML = data.data.grand_total.human_readable_total_including_other_language.split(' ')[0];
-    })
-        .catch(error => console.error('Error:', error));
+async function removePlaceholder(obj) {
+    obj.classList.remove("placeholder-wave");
+    obj.classList.remove("placeholder");
+    obj.classList.remove("rounded");
 }
 
-function clockTime() {
+async function getWeather() {
+    const weatherElement = document.getElementById("weather");
+
+    try {
+        const url = 'https://wavycat-page.pages.dev/weather';
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            weatherElement.innerText = 'Unknown outdoor';
+        }
+
+        const data = await response.json();
+        weatherElement.innerHTML = `${data.main.temp}°C – ${data.weather.main}`; // – ${data.weather.main}
+
+        console.log(data);
+        await removePlaceholder(weatherElement);
+    } catch (e) {
+        console.log(`Error in wakatime: ${e}`);
+    }
+}
+
+async function clockTime() {
     const currentTimeElement = document.getElementById("time");
 
     setInterval(() => {
@@ -21,12 +36,12 @@ function clockTime() {
             hour12: false,
             timeZone: 'Etc/GMT-5'
         });
-    }, 200);
+    }, 1000);
 }
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    getWakatimeData();
-    clockTime();
+    clockTime().then();
+    getWeather().then();
     // Здесь может быть ещё что-нибудь
 });

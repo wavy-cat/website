@@ -1,211 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-<!-- https://femboy.beauty/HaP_j -->
-
+<html lang="en" class="h-100">
 <head>
     <meta charset="UTF-8">
     <title>WavyCat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/essential.css">
     <link rel="icon" href="img/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jaldi:wght@700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
           rel="stylesheet">
 </head>
+<body class="d-flex h-100 inter">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto"></header>
 
-<body class="text-light">
-<main class="flex-shrink-0">
-    <div class="container text-light box">
-        <header>
-            <img id="avatar" src="img/avatar2.webp" srcset="img/avatar2.webp 1024w, img/avatar2-small.webp 512w"
-                 alt="Avatar">
-            <div>
-                <h1>WavyCat</h1>
-                <p>A digital creature, possibly with cat ears</p>
-            </div>
-        </header>
-        <div class="content">
-            <p class="mini_stats">
-                Local time: <b id="time" class="placeholder-glow"><span class="placeholder">00:00</span></b> ·
-                <b id="hrs" class="placeholder-glow"><span class="placeholder">1,000</span></b> hrs in Wakatime ·
-                <b>50+</b> games on Steam
-                <noscript>
-                    <br>
-                    Imagine the place where JavaScript works...
-                </noscript>
+    <main class="px-3">
+        <div class="container main-box">
+            <img src="img/avatar-small.webp" class="avatar" alt="WavyCat's Avatar">
+            <h2 class="manrope fw-bold color-dark-1">WavyCat</h2>
+            <p class="fw-semibold color-dark-2 details"><span class="placeholder placeholder-wave rounded" id="weather">17.0°C – Rain</span>
+                • <span id="time">12:00</span> UTC+5</p>
+            <p class="fw-medium color-dark-3 description">
+                A digital creature with cat ears, as well as a software engineer.
             </p>
 
-            <p class="title">Meet me in</p>
-            <div class="container text-center">
-                <div class="row align-items-start">
-                    <div class="col position-relative">
-                        <a target="_blank" class="button" href="https://discord.com/users/613651509015740416/">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg"
-                                 class="icons position-absolute top-50 start-0 translate-middle-y icon-social"
-                                 alt="Discord">
-                            Discord
-                            <img src="https://icons.getbootstrap.com/assets/icons/box-arrow-up-right.svg"
-                                 class="icons position-absolute top-50 end-0 translate-middle-y icon-link"
-                                 alt="Link">
-                        </a>
-                    </div>
-
-                    <div class="col position-relative">
-                        <a target="_blank" class="button" href="https://t.me/wavy_so_cat">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg"
-                                 class="icons position-absolute top-50 start-0 translate-middle-y icon-social"
-                                 alt="Telegram">
-                            Telegram
-                            <img src="https://icons.getbootstrap.com/assets/icons/box-arrow-up-right.svg"
-                                 class="icons position-absolute top-50 end-0 translate-middle-y icon-link"
-                                 alt="Link">
-                        </a>
-                    </div>
-
-                    <div class="col position-relative">
-                        <a target="_blank" class="button" href="https://steamcommunity.com/id/wavycat/">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/steam.svg"
-                                 class="icons position-absolute top-50 start-0 translate-middle-y icon-social"
-                                 alt="Discord">
-                            Steam
-                            <img src="https://icons.getbootstrap.com/assets/icons/box-arrow-up-right.svg"
-                                 class="icons position-absolute top-50 end-0 translate-middle-y icon-link"
-                                 alt="Link">
-                        </a>
-                    </div>
-
-                    <div class="col position-relative">
-                        <a target="_blank" class="button" href="https://github.com/wavy-cat">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg"
-                                 class="icons position-absolute top-50 start-0 translate-middle-y icon-social"
-                                 alt="GitHub">
-                            GitHub
-                            <img src="https://icons.getbootstrap.com/assets/icons/box-arrow-up-right.svg"
-                                 class="icons position-absolute top-50 end-0 translate-middle-y icon-link"
-                                 alt="Link">
-                        </a>
-                    </div>
-
-                    <div class="col position-relative">
-                        <a target="_blank" class="button" href="https://wakatime.com/@wavycat">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/wakatime.svg"
-                                 class="icons position-absolute top-50 start-0 translate-middle-y icon-social"
-                                 alt="Wakatime">
-                            Wakatime
-                            <img src="https://icons.getbootstrap.com/assets/icons/box-arrow-up-right.svg"
-                                 class="icons position-absolute top-50 end-0 translate-middle-y icon-link"
-                                 alt="Link">
-                        </a>
-                    </div>
-
-                    <div class="col position-relative">
-                        <a target="_blank" class="button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg"
-                                 class="icons position-absolute top-50 start-0 translate-middle-y icon-social"
-                                 alt="YouTube">
-                            YouTube
-                            <img src="https://icons.getbootstrap.com/assets/icons/box-arrow-up-right.svg"
-                                 class="icons position-absolute top-50 end-0 translate-middle-y icon-link"
-                                 alt="Link">
-                        </a>
-                    </div>
-
-                    <!--                    <div class="col position-relative">-->
-                    <!--                        &lt;!&ndash; Это пустое место под ещё одну кнопку &ndash;&gt;-->
-                    <!--                    </div>-->
-                </div>
+            <div class="d-flex align-items-center gap-2 social">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg" alt="Discord" class="icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg" alt="Telegram" class="icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/steam.svg" alt="Steam" class="icon">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" class="icon">
             </div>
 
-            <p class="title">Open Source projects</p>
-
-            <div class="container">
-                <div class="row align-items-start">
-                    <div class="col">
-                        <div class="card" style="border: none;">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg"
-                                         class="icon-card" alt="Python">
-                                    wavy-totem-lib
-                                </h5>
-                                <p class="card-text">Library for generating Minecraft totem texture</p>
-                                <a style="margin-top: 6px;" target="_blank"
-                                   href="https://pypi.org/project/wavy-totem-lib/"
-                                   class="btn btn-sm btn-outline-light">PyPI</a>
-                                <a style="margin-top: 6px;" target="_blank"
-                                   href="https://github.com/wavy-cat/wavy-totem-lib"
-                                   class="btn btn-sm btn-outline-light">GitHub</a>
-                                <a style="margin-top: 6px;" target="_blank"
-                                   href="https://github.com/wavy-cat/monkaTotemLib"
-                                   class="btn btn-sm btn-outline-light">KT Lib</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="border: none;">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/kotlin.svg"
-                                         class="icon-card" alt="Kotlin">
-                                    Cat Activity
-                                </h5>
-                                <p class="card-text">Plugin for displaying activity in Discord profile</p>
-                                <a style="margin-top: 6px;" target="_blank"
-                                   href="https://plugins.jetbrains.com/plugin/24065-cat-activity"
-                                   class="btn btn-sm btn-outline-light">Marketplace</a>
-                                <a style="margin-top: 6px;" target="_blank"
-                                   href="https://github.com/wavy-cat/cat-activity"
-                                   class="btn btn-sm btn-outline-light">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="border: none;">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/go.svg"
-                                         class="icon-card" alt="Python">
-                                    GoBrainfuck
-                                </h5>
-                                <p class="card-text">A Brainfuck language interpreter, written in Go</p>
-                                <a style="margin-top: 6px;" target="_blank"
-                                   href="https://github.com/wavy-cat/GoBrainfuck/releases"
-                                   class="btn btn-sm btn-outline-light">Releases</a>
-                                <a style="margin-top: 6px;" target="_blank"
-                                   href="https://github.com/wavy-cat/GoBrainfuck"
-                                   class="btn btn-sm btn-outline-light">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="border: none;">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg"
-                                         class="icon-card" alt="Python">
-                                    aiomcnet
-                                </h5>
-                                <p class="card-text">Library for asynchronous interaction with Minecraft server</p>
-                                <a style="margin-top: 6px;" target="_blank"
-                                   href="https://github.com/wavy-cat/aiomcnet"
-                                   class="btn btn-sm btn-outline-light">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--                    <div class="col">-->
-                    <!--                        Emply col-->
-                    <!--                    </div>-->
-                </div>
-            </div>
-
-            <footer>
-                <p>Hosted globally on <a href="https://pages.cloudflare.com/" target="_blank">Cloudflare Pages</a>.</p>
-            </footer>
         </div>
-    </div>
-</main>
+    </main>
+
+    <footer class="mt-auto"></footer>
+</div>
 </body>
 <script src="js/loader.js"></script>
 </html>
