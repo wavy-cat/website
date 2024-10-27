@@ -1,0 +1,21 @@
+{
+  "name": "wavycat-page",
+  "version": "1.0.0",
+  "description": "A small personalized WavyCat page.",
+  "main": "index.js",
+  "scripts": {
+    "preview": "npx wrangler pages dev .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wavy-cat/wavycat-page.git"
+  },
+  "author": "WavyCat",
+  "license": "BSL-1.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241022.0",
+    "typescript": "^5.6.3",
+    "wrangler": "^3.83.0"
+  }
+}
