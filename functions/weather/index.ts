@@ -21,6 +21,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     const response = await fetch(url);
 
     if (!response.ok) {
+      console.error(response.statusText, await response.body.getReader().read());
       return new Response("Error fetching weather data", {status: 500});
     }
 
