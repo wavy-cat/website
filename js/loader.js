@@ -8,7 +8,7 @@ async function getWeather() {
     const weatherElement = document.getElementById("weather");
 
     try {
-        const url = 'https://wavycat-page.pages.dev/weather';
+        const url = '/weather';
         const response = await fetch(url);
 
         if (!response.ok) {
