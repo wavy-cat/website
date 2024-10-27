@@ -1,7 +1,14 @@
-async function removePlaceholder(obj) {
-    obj.classList.remove("placeholder-wave");
-    obj.classList.remove("placeholder");
-    obj.classList.remove("rounded");
+const unknown = '¯\\_(ツ)_/¯';
+
+async function removePlaceholder(element) {
+    element.classList.remove("placeholder-wave");
+    element.classList.remove("placeholder");
+    element.classList.remove("rounded");
+}
+
+async function setWeatherValue(element, value) {
+    element.innerText = value;
+    await removePlaceholder(element);
 }
 
 async function getWeather() {
@@ -12,16 +19,17 @@ async function getWeather() {
         const response = await fetch(url);
 
         if (!response.ok) {
-            weatherElement.innerText = 'Unknown outdoor';
+            console.error(`Error in weather fetching: ${response.statusText}`);
+            await setWeatherValue(weatherElement, unknown);
+            return;
         }
 
         const data = await response.json();
-        weatherElement.innerHTML = `${data.main.temp}°C – ${data.weather.main}`; // – ${data.weather.main}
-
-        console.log(data);
-        await removePlaceholder(weatherElement);
+        const value = `${data.temp}°C – ${data.weather}`;
+        await setWeatherValue(weatherElement, value);
     } catch (e) {
-        console.log(`Error in wakatime: ${e}`);
+        console.error(`Error in weather fetching: ${e}`);
+        await setWeatherValue(weatherElement, unknown);
     }
 }
 
