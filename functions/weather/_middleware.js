@@ -11,7 +11,7 @@ export async function onRequestOptions() {
     });
 }
 
-// Set CORS to all /api responses
+// Set CORS to all /weather responses
 export async function onRequest(context) {
     const response = await context.next();
     response.headers.set('Access-Control-Allow-Origin', '*');
