@@ -29,7 +29,10 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     const data = { temp: main.temp, weather: weather[0].main };
 
     return new Response(JSON.stringify(data), {
-      headers: {'Content-Type': 'application/json'}
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'max-age=1800'
+      }
     });
   } catch (error) {
     console.error(error);
