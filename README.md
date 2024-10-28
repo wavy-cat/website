@@ -1,4 +1,4 @@
-# wavycat-page
+# WavyCat Website
 
 A personalized WavyCat website.
 
