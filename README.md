@@ -27,7 +27,7 @@ the desired city.
 
 To deploy the project to Cloudflare Pages, follow these steps:
 
-1. [Create a fork](https://github.com/wavy-cat/wavycat-page/fork) of the repository.
+1. [Create a fork](https://github.com/wavy-cat/website/fork) of the repository.
 2. In the Cloudflare dashboard, start creating a new project and select your forked repository.
 3. During the "Set up builds and deployments" stage, add the environment variables described in the `.dev.vars` file.
 4. Click "Deploy" to deploy the project.
