@@ -1,55 +1,55 @@
 const unknown = '¯\\_(ツ)_/¯';
 
-async function removePlaceholder(element) {
-    element.classList.remove("placeholder-wave");
-    element.classList.remove("placeholder");
-    element.classList.remove("rounded");
-}
-
-async function setWeatherValue(element, value) {
-    element.innerText = value;
-    await removePlaceholder(element);
-}
-
 async function getWeather() {
-    const weatherElement = document.getElementById("weather");
-
     try {
         const url = '/weather';
         const response = await fetch(url);
 
         if (!response.ok) {
             console.error(`Error in weather fetching: ${response.statusText}`);
-            await setWeatherValue(weatherElement, unknown);
-            return;
+            return unknown;
         }
 
         const data = await response.json();
-        const value = `${data.temp}°C – ${data.weather}`;
-        await setWeatherValue(weatherElement, value);
+        return `${data.temp}°C – ${data.weather}`;
     } catch (e) {
         console.error(`Error in weather fetching: ${e}`);
-        await setWeatherValue(weatherElement, unknown);
+        return unknown;
     }
+}
+
+async function getTime() {
+    return new Date().toLocaleString('ru-RU', {
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: false,
+        timeZone: 'Etc/GMT-5'
+    }) + ' Ekb';
 }
 
 async function clockTime() {
     const currentTimeElement = document.getElementById("time");
 
     setInterval(() => {
-        currentTimeElement.innerHTML = new Date().toLocaleString('ru-RU', {
-            hour: 'numeric',
-            minute: 'numeric',
-            // second: 'numeric',
-            hour12: false,
-            timeZone: 'Etc/GMT-5'
-        });
+        getTime().then(time => currentTimeElement.innerHTML = time.toString());
     }, 1000);
 }
 
+async function setDetails(text) {
+    const detailsElement = document.getElementById("details");
+    detailsElement.innerHTML = text;
+}
+
+async function loadingElements() {
+    const [result1, result2] = await Promise.all([getTime(), getWeather()]);
+    await setDetails(`<span id="weather">${result2}</span> • <span id="time">${result1}</span>`);
+    await clockTime();
+}
 
 document.addEventListener("DOMContentLoaded", function () {
-    clockTime().then();
-    getWeather().then();
+    // clockTime().then();
+    // getWeather().then();
+    loadingElements().then();
     // Здесь может быть ещё что-нибудь
 });

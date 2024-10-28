@@ -34,7 +34,7 @@ p, h2 {
 }
 
 .icon {
-    width: 2.4rem;
+    width: 2rem;
     filter: invert(0.16);
     transition: filter 0.2s;
 }
