@@ -33,7 +33,7 @@ async function clockTime() {
 
     setInterval(() => {
         getTime().then(time => currentTimeElement.innerHTML = time.toString());
-    }, 1000);
+    }, 100);
 }
 
 async function setDetails(text) {
@@ -42,8 +42,8 @@ async function setDetails(text) {
 }
 
 async function loadingElements() {
-    const [result1, result2] = await Promise.all([getTime(), getWeather()]);
-    await setDetails(`<span id="weather">${result2}</span> • <span id="time">${result1}</span>`);
+    const [result1, result2] = await Promise.all([getWeather(), getTime()]);
+    await setDetails(`<span id="weather">${result1}</span> • <span id="time">${result2}</span>`);
     await clockTime();
 }
 
