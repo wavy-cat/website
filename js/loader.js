@@ -25,7 +25,7 @@ async function getTime() {
         second: 'numeric',
         hour12: false,
         timeZone: 'Etc/GMT-5'
-    }) + ' Ekb';
+    }) + ' YEKT';
 }
 
 async function clockTime() {
