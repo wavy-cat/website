@@ -8,7 +8,7 @@ Designed for easy deployment on Cloudflare Pages.
 
 To set up the project locally, follow these steps:
 
-1. **Install Node.js**: Download and install [Node.js](https://nodejs.org/en/download/) version 20, which includes npm.
+1. **Install Node.js**: Download and install [Node.js](https://nodejs.org/en/download/) version 20/22, which includes npm.
 2. **Install dependencies**: `npm install`.
 3. **Create a `.dev.vars` file** in the root directory.
 4. **Start the development server:** `npm run preview`
