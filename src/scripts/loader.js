@@ -6,14 +6,14 @@ async function getWeather() {
         const response = await fetch(url);
 
         if (!response.ok) {
-            console.error(`Error in weather fetching: ${response.statusText}`);
+            console.error('Error in weather fetching:', response.statusText);
             return unknown;
         }
 
         const data = await response.json();
         return `${data.temp}°C – ${data.weather}`;
     } catch (e) {
-        console.error(`Error in weather fetching: ${e}`);
+        console.error('Error in weather fetching:', e);
         return unknown;
     }
 }
@@ -29,11 +29,12 @@ async function getTime() {
 }
 
 async function clockTime() {
+    const delay = 100; // ms
     const currentTimeElement = document.getElementById("time");
 
     setInterval(() => {
         getTime().then(time => currentTimeElement.innerHTML = time.toString());
-    }, 100);
+    }, delay);
 }
 
 async function setDetails(text) {
