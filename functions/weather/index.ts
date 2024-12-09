@@ -13,9 +13,9 @@ interface APIResponse {
 }
 
 export const onRequestGet: PagesFunction<Env> = async (context) => {
-  const api_key = context.env.OWM_API_KEY;
-  const city_name = context.env.CITY_NAME;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&units=metric&lang=en&appid=${api_key}`;
+  const apiKey = context.env.OWM_API_KEY;
+  const cityName = context.env.CITY_NAME;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=en&appid=${apiKey}`;
 
   try {
     const response = await fetch(url);
