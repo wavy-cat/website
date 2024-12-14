@@ -3,3 +3,5 @@ node_modules
 .wrangler
 .dev.vars
 v3
+.parcel-cache
+dist
