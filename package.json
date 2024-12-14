@@ -2,7 +2,10 @@
   "name": "wavycat-page",
   "version": "1.0.0",
   "description": "A small personalized WavyCat page.",
-  "source": ["src/index.html", "src/404.html"],
+  "source": [
+    "src/index.html",
+    "src/404.html"
+  ],
   "scripts": {
     "dev": "wrangler pages dev src",
     "build": "parcel build"
@@ -16,6 +19,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241205.0",
     "parcel": "^2.13.2",
+    "sharp": "^0.33.5",
     "svgo": "^3.3.2",
     "typescript": "^5.7.2",
     "wrangler": "^3.93.0"
