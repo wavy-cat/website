@@ -6,6 +6,11 @@
     "src/index.html",
     "src/404.html"
   ],
+  "staticFiles": [
+    {
+      "staticPath": "src/_redirects"
+    }
+  ],
   "scripts": {
     "dev": "wrangler pages dev src",
     "build": "parcel build"
@@ -19,6 +24,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241205.0",
     "parcel": "^2.13.2",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "sharp": "^0.33.5",
     "svgo": "^3.3.2",
     "typescript": "^5.7.2",
