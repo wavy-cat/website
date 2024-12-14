@@ -2,7 +2,7 @@
   "name": "wavycat-page",
   "version": "1.0.0",
   "description": "A small personalized WavyCat page.",
-  "source": "src/index.html",
+  "source": ["src/index.html", "src/404.html"],
   "scripts": {
     "dev": "wrangler pages dev src",
     "build": "parcel build"
