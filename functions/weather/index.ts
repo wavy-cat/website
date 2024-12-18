@@ -1,5 +1,3 @@
-import { KVNamespace } from '@cloudflare/workers-types';
-
 interface Env {
   OWM_API_KEY: string;
   CITY_NAME: string;
