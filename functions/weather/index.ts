@@ -1,6 +1,9 @@
+import { KVNamespace } from '@cloudflare/workers-types';
+
 interface Env {
   OWM_API_KEY: string;
   CITY_NAME: string;
+  WEATHER_CACHE: KVNamespace;
 }
 
 interface APIResponse {
@@ -15,6 +18,21 @@ interface APIResponse {
 export const onRequestGet: PagesFunction<Env> = async (context) => {
   const apiKey = context.env.OWM_API_KEY;
   const cityName = context.env.CITY_NAME;
+  const cache = context.env.WEATHER_CACHE;
+  const cacheKey = `weather_${cityName}`;
+  const cacheTTL = 15 * 60; // 15 minutes in seconds
+
+  // Check cache first
+  const cachedData = await cache.get(cacheKey);
+  if (cachedData) {
+    return new Response(cachedData, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': `max-age=${cacheTTL}`
+      }
+    });
+  }
+
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=en&appid=${apiKey}`;
 
   try {
@@ -27,11 +45,15 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
 
     const {weather, main}: APIResponse = await response.json();
     const data = { temp: main.temp, weather: weather[0].main };
+    const dataString = JSON.stringify(data);
 
-    return new Response(JSON.stringify(data), {
+    // Cache the new data
+    await cache.put(cacheKey, dataString, { expirationTtl: cacheTTL });
+
+    return new Response(dataString, {
       headers: {
         'Content-Type': 'application/json',
-        'Cache-Control': 'max-age=1800'
+        'Cache-Control': `max-age=${cacheTTL}`
       }
     });
   } catch (error) {
