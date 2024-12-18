@@ -25,8 +25,6 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   };
 
   // Check cache first
-  console.log(context.env.WEATHER_CACHE);
-  console.log(cache);
   const cachedData = await cache.get(cacheKey);
   if (cachedData) return new Response(cachedData, {headers: headers});
 
