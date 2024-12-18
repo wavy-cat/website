@@ -28,9 +28,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   console.log(context.env.WEATHER_CACHE);
   console.log(cache);
   const cachedData = await cache.get(cacheKey);
-  if (cachedData) {
-    return new Response(cachedData, {headers: headers});
-  }
+  if (cachedData) return new Response(cachedData, {headers: headers});
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=en&appid=${apiKey}`;
   const response = await fetch(url);

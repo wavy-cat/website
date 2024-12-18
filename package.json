@@ -12,7 +12,7 @@
     }
   ],
   "scripts": {
-    "dev": "wrangler pages dev src",
+    "dev": "wrangler pages dev src --kv WEATHER_CACHE",
     "build": "parcel build"
   },
   "repository": {
