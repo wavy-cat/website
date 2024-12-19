@@ -1,5 +1,3 @@
-const unknown = '¯\\_(ツ)_/¯';
-
 async function getWeather() {
     try {
         const url = '/weather';
@@ -7,50 +5,50 @@ async function getWeather() {
 
         if (!response.ok) {
             console.error('Error in weather fetching:', response.statusText);
-            return unknown;
+            return undefined;
         }
 
         const data = await response.json();
         return `${data.temp}°C – ${data.weather}`;
     } catch (e) {
         console.error('Error in weather fetching:', e);
-        return unknown;
+        return undefined;
     }
 }
 
-async function getTime() {
+function getTime() {
     return new Date().toLocaleString('ru-RU', {
         hour: 'numeric',
         minute: 'numeric',
-        second: 'numeric',
+        // second: 'numeric',
         hour12: false,
         timeZone: 'Etc/GMT-5'
     }) + ' YEKT';
 }
 
 async function clockTime() {
-    const delay = 100; // ms
+    const delay = 300; // ms
     const currentTimeElement = document.getElementById("time");
 
     setInterval(() => {
-        getTime().then(time => currentTimeElement.innerHTML = time.toString());
+        const time = getTime();
+        if (currentTimeElement.textContent !== time) currentTimeElement.textContent = time;
     }, delay);
 }
 
-async function setDetails(text) {
-    const detailsElement = document.getElementById("details");
-    detailsElement.innerHTML = text;
+function setDetails(weather, time) {
+    let text = `<span id="time">${time}</span>`;
+    if (weather !== undefined) text = `<span id="weather">${weather}</span> • ${text}`;
+    document.getElementById("details").innerHTML = text;
 }
 
 async function loadingElements() {
-    const [result1, result2] = await Promise.all([getWeather(), getTime()]);
-    await setDetails(`<span id="weather">${result1}</span> • <span id="time">${result2}</span>`);
+    const [resultWeather, resultTime] = await Promise.all([getWeather(), getTime()]);
+    setDetails(resultWeather, resultTime);
     await clockTime();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // clockTime().then();
-    // getWeather().then();
     loadingElements().then();
     // Здесь может быть ещё что-нибудь
 });
