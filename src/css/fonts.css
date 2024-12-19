@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 
-@font-face {
-    font-family: "Wastebased";
-    src: url("../fonts/Wastebased.otf");
-}
-
 .manrope {
     font-family: "Manrope", system-ui;
     font-optical-sizing: auto;
@@ -13,12 +8,6 @@
 
 .inter {
     font-family: "Inter", system-ui;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-.wastebased {
-    font-family: "Wastebased", system-ui;
     font-optical-sizing: auto;
     font-style: normal;
 }
