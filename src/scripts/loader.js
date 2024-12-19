@@ -1,7 +1,6 @@
 async function getWeather() {
     try {
-        const url = '/weather';
-        const response = await fetch(url);
+        const response = await fetch('/weather');
 
         if (!response.ok) {
             console.error('Error in weather fetching:', response.statusText);
@@ -27,7 +26,7 @@ function getTime() {
 }
 
 async function clockTime() {
-    const delay = 300; // ms
+    const delay = 1000; // ms
     const currentTimeElement = document.getElementById("time");
 
     setInterval(() => {
