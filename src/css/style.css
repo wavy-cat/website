@@ -10,11 +10,12 @@ p, h2 {
 }
 
 .main-box {
-    max-width: 400px;
-    border: 3px solid #A48367;
+    background: linear-gradient(#FFFBFB, #FFFBFB) padding-box,
+    linear-gradient(to bottom, #6C5242, #C09176) border-box;
     border-radius: 10px;
+    border: 4px solid transparent;
+    max-width: 400px;
     padding: 22px;
-    background-color: rgba(249, 242, 236, 0.7);
 
     .avatar {
         width: 4rem;
