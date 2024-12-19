@@ -8,7 +8,7 @@ async function getWeather() {
         }
 
         const data = await response.json();
-        return `${data.temp}°C – ${data.weather}`;
+        return `${data.temp}°C – <span class="secondary-2">${data.weather}</span>`;
     } catch (e) {
         console.error('Error in weather fetching:', e);
         return undefined;
@@ -16,13 +16,14 @@ async function getWeather() {
 }
 
 function getTime() {
-    return new Date().toLocaleString('ru-RU', {
+    const time = new Date().toLocaleString('ru-RU', {
         hour: 'numeric',
         minute: 'numeric',
         // second: 'numeric',
         hour12: false,
         timeZone: 'Etc/GMT-5'
-    }) + ' YEKT';
+    });
+    return `${time} <span class="secondary-2">YEKT</span>`;
 }
 
 async function clockTime() {
@@ -31,13 +32,13 @@ async function clockTime() {
 
     setInterval(() => {
         const time = getTime();
-        if (currentTimeElement.textContent !== time) currentTimeElement.textContent = time;
+        if (currentTimeElement.innerHTML !== time) currentTimeElement.innerHTML = time;
     }, delay);
 }
 
 function setDetails(weather, time) {
     let text = `<span id="time">${time}</span>`;
-    if (weather !== undefined) text = `<span id="weather">${weather}</span> • ${text}`;
+    if (weather !== undefined) text = `${weather} • ${text}`;
     document.getElementById("details").innerHTML = text;
 }
 
