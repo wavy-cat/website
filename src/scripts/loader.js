@@ -8,7 +8,7 @@ async function getWeather() {
         }
 
         const data = await response.json();
-        return `${data.temp}°C – <span class="secondary-2">${data.weather}</span>`;
+        return `${data.temp}°C <span class="secondary-2">– ${data.weather}</span>`;
     } catch (e) {
         console.error('Error in weather fetching:', e);
         return undefined;
