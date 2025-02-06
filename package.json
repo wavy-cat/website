@@ -9,6 +9,9 @@
   "staticFiles": [
     {
       "staticPath": "src/_redirects"
+    },
+    {
+      "staticPath": "src/img/favicon.ico"
     }
   ],
   "scripts": {
