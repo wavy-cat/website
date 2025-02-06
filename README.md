@@ -1,6 +1,6 @@
-# WavyCat Website
+# WavyCat's Website
 
-A personalized WavyCat website.
+A personalized WavyCat's website.
 
 Designed for easy deployment on Cloudflare Pages.
 
