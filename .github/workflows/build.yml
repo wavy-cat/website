@@ -44,6 +44,9 @@ jobs:
           name: build-artifacts
           path: .vercel/output/static/
 
+      - name: Complete the wrangler.toml
+        run: echo "${{ secrets.WRANGLER_CONTENTS }}" >> wrangler.toml
+
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
