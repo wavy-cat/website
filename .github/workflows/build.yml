@@ -47,9 +47,18 @@ jobs:
       - name: Complete the wrangler.toml
         run: echo "${{ secrets.WRANGLER_CONTENTS }}" > wrangler.toml
 
-      - name: Deploy
-        uses: cloudflare/wrangler-action@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm i wrangler
+
+      - name: Deploy
+        run: npx wrangler pages deploy
+        env:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy
+          command: pages deploy .vercel/output/static
