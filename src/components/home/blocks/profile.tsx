@@ -18,15 +18,15 @@ export default function Profile() {
         </Avatar>
         <div>
           <p className="font-semibold">Catherine Caramel</p>
-          <p className="text-sm text-gray-400">@wavycat • she/her</p>
+          <p className="text-sm text-muted-foreground">@wavycat • she/her</p>
         </div>
       </CardHeader>
       <CardContent className="space-y-2">
-        <p className="text-sm text-gray-300">
+        <p className="text-sm">
           Ever-sleepy cat-girl and software engineer from Russia, building different open source products. Also
           hireable!
         </p>
-        <p className="text-sm text-gray-300">Weather: <Weather /></p>
+        <p className="text-sm">Weather: <Weather /></p>
       </CardContent>
       <CardFooter className="flex gap-2">
         {/*Github*/}
