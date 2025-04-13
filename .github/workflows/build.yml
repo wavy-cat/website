@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-24.04-arm
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -36,8 +37,6 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v4
-
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
@@ -45,20 +44,11 @@ jobs:
           path: .vercel/output/static/
 
       - name: Complete the wrangler.toml
-        run: echo "${{ secrets.WRANGLER_CONTENTS }}" > wrangler.toml
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm i wrangler
+        run: echo "${{ secrets.WRANGLER_CONTENTS }}" | base64 -d > wrangler.toml
 
       - name: Deploy
-        run: npx wrangler pages deploy
-        env:
+        uses: cloudflare/wrangler-action@v3
+        with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vercel/output/static
+          command: pages deploy
