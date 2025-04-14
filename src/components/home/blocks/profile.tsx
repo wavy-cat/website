@@ -4,8 +4,8 @@ import {buttonVariants} from "@/components/ui/button"
 import * as React from "react"
 import {SiDiscord, SiGithub, SiSteam, SiTelegram} from "@icons-pack/react-simple-icons"
 import Link from "next/link"
-import {HoverCard, HoverCardContent, HoverCardTrigger} from "@/components/ui/hover-card"
 import Weather from "@/components/home/weather"
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip"
 
 // Блок с профилем
 export default function Profile() {
@@ -37,18 +37,20 @@ export default function Profile() {
         </Link>
 
         {/*Discord*/}
-        <HoverCard>
-          <HoverCardTrigger asChild>
-            <Link className={buttonVariants({variant: "outline", size: "icon"})}
-                  href="https://discord.com/users/613651509015740416/"
-                  target="_blank">
-              <SiDiscord/>
-            </Link>
-          </HoverCardTrigger>
-          <HoverCardContent className="w-full">
-            <p>@wavycat (WavyCat#0618)</p>
-          </HoverCardContent>
-        </HoverCard>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link className={buttonVariants({variant: "outline", size: "icon"})}
+                    href="https://discord.com/users/613651509015740416/"
+                    target="_blank">
+                <SiDiscord/>
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>@wavycat (WavyCat#0618)</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
 
         {/*Telegram*/}
         <Link className={buttonVariants({variant: "outline", size: "icon"})}
