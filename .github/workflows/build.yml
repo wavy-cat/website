@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build (CI)
     runs-on: ubuntu-24.04-arm
 
     steps:
@@ -34,21 +34,22 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path: .vercel/output/static/
+          path: out
+
   deploy:
-    name: Deploy
+    name: Deploy (CD)
     runs-on: ubuntu-24.04-arm
     needs: build
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
           name: build-artifacts
-          path: .vercel/output/static/
-
-      - name: Complete the wrangler.toml
-        run: echo "${{ secrets.WRANGLER_CONTENTS }}" | base64 -d > wrangler.toml
+          path: out
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3

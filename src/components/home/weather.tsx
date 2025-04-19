@@ -11,7 +11,7 @@ type response = {
 
 export default function Weather() {
   const { data, error } = useSWR(
-    `https://www.wavycat.ru/api/weather`,
+    `/api/weather`,
     fetcher
   ) as unknown as {
     data: response
