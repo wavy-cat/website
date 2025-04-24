@@ -12,7 +12,7 @@ export type ButtonData = {
 
 interface ProjectProps {
   name: string
-  badges: string[]
+  badges: (string | React.ReactNode)[]
   description: string
   buttons: ButtonData[]
 }

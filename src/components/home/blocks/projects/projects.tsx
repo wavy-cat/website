@@ -1,6 +1,7 @@
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
 import SingleProject from "@/components/home/blocks/projects/single-project"
 import {ScrollArea} from "@/components/ui/scroll-area"
+import {SiGo, SiKotlin, SiPython, SiTypescript} from "@icons-pack/react-simple-icons"
 
 // Блок с проектами
 export default function Projects() {
@@ -15,8 +16,8 @@ export default function Projects() {
           <div className="space-y-4">
             <SingleProject name="Cat Activity"
                            badges={[
+                             <><SiKotlin /> Kotlin</>,
                              "Plugin",
-                             "Kotlin",
                              "Discord"
                            ]}
                            description="Plugin for JetBrains IDE to show your activity in your Discord profile."
@@ -34,8 +35,8 @@ export default function Projects() {
                            ]}/>
             <SingleProject name="TotemLib"
                            badges={[
+                             <><SiPython /> Python</>,
                              "Library",
-                             "Python",
                              "Minecraft"
                            ]}
                            description="Python library to generate totems of undying for Minecraft."
@@ -50,8 +51,8 @@ export default function Projects() {
                            ]}/>
             <SingleProject name="PetPet Go"
                            badges={[
+                             <><SiGo /> Go</>,
                              "Service",
-                             "Go",
                              "Discord"
                            ]}
                            description="A web service for generating petpet GIFs (and APNG now) based on a Discord user's avatar."
@@ -65,6 +66,7 @@ export default function Projects() {
                            ]}/>
             <SingleProject name="Website"
                            badges={[
+                             <><SiTypescript /> TypeScript</>,
                              "Web",
                              "Next.js"
                            ]}
@@ -74,8 +76,9 @@ export default function Projects() {
                            ]}/>
             <SingleProject name="doki"
                            badges={[
+                             <><SiGo /> Go</>,
                              "CLI Utility",
-                             "Go"
+                             "Networking",
                            ]}
                            description="A minimalistic and fast port knocker."
                            buttons={[
