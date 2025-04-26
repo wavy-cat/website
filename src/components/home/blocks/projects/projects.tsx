@@ -78,7 +78,7 @@ export default function Projects() {
                            badges={[
                              <><SiGo /> Go</>,
                              "CLI Utility",
-                             "Networking",
+                             "Network",
                            ]}
                            description="A minimalistic and fast port knocker."
                            buttons={[
