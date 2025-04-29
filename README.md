@@ -6,7 +6,7 @@ A personalized WavyCat's website. [View it](https://www.wavycat.ru/)
 
 ## Stack
 
-![Stack](https://skillicons.dev/icons?i=cloudflare,workers,nextjs,react,tailwind,webpack,nodejs,npm,githubactions)
+![Stack](https://skillicons.dev/icons?i=cloudflare,workers,nextjs,react,tailwind,webpack,nodejs,pnpm,githubactions)
 
 * **Runtime:** Node.js 22
 * **Package manager:** pnpm
