@@ -9,7 +9,7 @@ A personalized WavyCat's website. [View it](https://www.wavycat.ru/)
 ![Stack](https://skillicons.dev/icons?i=cloudflare,workers,nextjs,react,tailwind,webpack,nodejs,npm,githubactions)
 
 * **Runtime:** Node.js 22
-* **Package manager:** npm
+* **Package manager:** pnpm
 * **Framework:** Next.js 15
 * **UI library:** shadcn/ui
 * **Compiled in** GitHub Actions
