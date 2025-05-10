@@ -38,7 +38,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   }
 
   const {weather, main}: APIResponse = await response.json()
-  const data = {temp: main.temp, weather: weather[0].main}
+  const data = {temp: Math.round(main.temp), weather: weather[0].main}
   const dataString = JSON.stringify(data)
 
   // Cache the new data
