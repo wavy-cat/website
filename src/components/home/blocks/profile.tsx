@@ -2,7 +2,7 @@ import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card"
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar"
 import {buttonVariants} from "@/components/ui/button"
 import * as React from "react"
-import {SiDiscord, SiGithub, SiSteam, SiTelegram} from "@icons-pack/react-simple-icons"
+import {SiDiscord, SiGithub, SiSteam, SiTelegram, SiWakatime} from "@icons-pack/react-simple-icons"
 import Link from "next/link"
 import Weather from "@/components/home/weather"
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip"
@@ -34,6 +34,13 @@ export default function Profile() {
               href="https://github.com/wavy-cat"
               target="_blank">
           <SiGithub/>
+        </Link>
+
+        {/*Wakatime*/}
+        <Link className={buttonVariants({variant: "outline", size: "icon"})}
+              href="https://wakatime.com/@wavycat"
+              target="_blank">
+          <SiWakatime/>
         </Link>
 
         {/*Discord*/}
