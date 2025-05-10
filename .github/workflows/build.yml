@@ -7,7 +7,7 @@ on:
     paths-ignore:
       - README.md
       - LICENSE
-      - assets
+      - ../assets
 
 jobs:
   build:

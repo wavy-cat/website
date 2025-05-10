@@ -2,7 +2,7 @@
 
 A personalized WavyCat's website. [View it](https://www.wavycat.ru/)
 
-![img.png](assets/screenshot.png)
+![Screenshot](.github/assets/screenshot.png)
 
 ## Stack
 
