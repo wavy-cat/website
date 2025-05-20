@@ -6,13 +6,12 @@ A personalized WavyCat's website. [View it](https://www.wavycat.ru/)
 
 ## Stack
 
-![Stack](https://skillicons.dev/icons?i=cloudflare,workers,nextjs,react,tailwind,webpack,nodejs,pnpm,githubactions)
+![Stack](https://skillicons.dev/icons?i=cloudflare,workers,nextjs,react,tailwind,webpack,nodejs,pnpm)
 
-* **Runtime:** Node.js 22
+* **Runtime:** Node.js 22 / workerd
 * **Package manager:** pnpm
 * **Framework:** Next.js 15
 * **UI library:** shadcn/ui
-* **Compiled in** GitHub Actions
 * **Deployed on** Cloudflare Pages
 
 ## Getting started
@@ -36,8 +35,3 @@ For now, there is no way (and no need) to merge these two servers together.
 
 This section hasn't been written yet, but I think you should have no trouble figuring out such a small project on your
 own (or at least asking LLM).
-
-Let me tell you that you need to add secrets directly in the Cloudflare dashboard, and to deploy via GitHub Actions you
-need to specify authorization data (API token and account ID) from Cloudflare in the Actions secrets.
-
-Good luck!
