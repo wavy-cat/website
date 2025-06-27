@@ -1,6 +1,6 @@
 # WavyCat's Website
 
-A personalized WavyCat's website. [View it](https://www.wavycat.ru/)
+A personalized WavyCat's website. [View it](https://wcatie.xyz/)
 
 ![Screenshot](.github/assets/screenshot.png)
 
