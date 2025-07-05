@@ -1,0 +1,16 @@
+---
+interface SocialButton {
+	url: string,
+	icon: any
+}
+
+interface Props {
+	buttons: SocialButton[]
+}
+
+const {buttons} = Astro.props as Props
+---
+
+<section class="flex gap-4 flex-wrap">
+	{buttons.map(btn => <a href={btn.url} class="transition-transform duration-150 hover:scale-110"><btn.icon /></a>)}
+</section>
