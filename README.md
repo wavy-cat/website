@@ -11,7 +11,7 @@ A personalized WavyCat's website. [View it](https://wcatie.xyz/)
 * **Runtime:** Node.js 22
 * **Package manager:** pnpm
 * **Framework:** Astro 5
-* **Deployed on** Cloudflare Pages
+* **Deployed on** Cloudflare Workers
 
 ## Getting started
 
