@@ -1,7 +1,5 @@
 name = "website"
-compatibility_date = "2025-04-02"
-pages_build_output_dir = "out"
+compatibility_date = "2025-05-05"
 
-[[kv_namespaces]]
-binding = "WEATHER_CACHE"
-id = "f57aeb4c41cb475da3e0085f9bbf4ff9"
+[assets]
+directory = "./dist"
