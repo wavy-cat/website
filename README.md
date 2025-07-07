@@ -23,7 +23,7 @@ pnpm run dev
 
 ### Deploy globally
 
-to Cloudflare Workers.
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https%3A%2F%2Fgithub.com%2Fwavy-cat%2Fwebsite)
 
 ```
 pnpm run build && pnpm run deploy
