@@ -1,38 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '@fontsource/dm-sans/latin-400.css';
-import '../styles/global.css';
-import Image from 'astro/components/Image.astro';
+import Layout from "../layouts/Layout.astro";
 import background from '../assets/background.webp';
-import '@fontsource/jetbrains-mono/latin-600.css';
-import SocialLinks from '../components/SocialLinks.astro';
-import Github from 'simple-icons-astro/Github';
-import Discord from 'simple-icons-astro/Discord';
-import Wakatime from 'simple-icons-astro/Wakatime';
-import Telegram from 'simple-icons-astro/Telegram';
-import Steam from 'simple-icons-astro/Steam';
+import "@fontsource/jetbrains-mono/latin-600.css";
+import SocialLinks from "../components/SocialLinks.astro";
+import Github from "simple-icons-astro/Github";
+import Discord from "simple-icons-astro/Discord";
+import Wakatime from "simple-icons-astro/Wakatime";
+import Telegram from "simple-icons-astro/Telegram";
+import Steam from "simple-icons-astro/Steam";
 
 const socials = [
-	{'icon': Discord, 'url': 'https://discord.com/users/613651509015740416/'},
-	{'icon': Telegram, 'url': 'https://wavycatter.t.me/'},
-	{'icon': Github, 'url': 'https://github.com/wavy-cat'},
-	{'icon': Wakatime, 'url': 'https://wakatime.com/@wavycat'},
-	{'icon': Steam, 'url': 'https://steamcommunity.com'},
-]
+    { icon: Discord, url: "https://discord.com/users/613651509015740416/" },
+    { icon: Telegram, url: "https://wavycatter.t.me/" },
+    { icon: Github, url: "https://github.com/wavy-cat" },
+    { icon: Wakatime, url: "https://wakatime.com/@wavycat" },
+    { icon: Steam, url: "https://steamcommunity.com" },
+];
 ---
 
-<Layout title="WavyCat" description="Just a website with various links">
-    <div class="h-full font-sans bg-black text-white">
-        <Image class="fixed top-0 left-0 min-w-full h-full w-auto blur-md object-cover" src={background} alt=""
-               fetchpriority="high" loading="eager"/>
-        <main class="h-full flex justify-center">
-            <section class="z-10 flex flex-col items-start justify-center p-5 gap-4">
-                <h1 class="text-3xl mt-1 code-font">WavyCat</h1>
-                <p class="max-w-100">Ever-sleepy cat-girl astronaut and software engineer with experience in Go, TypeScript, Python, and Kotlin.</p>
-                <SocialLinks buttons={socials}/>
-            </section>
-        </main>
-    </div>
+<Layout title="WavyCat" description="Just a website with various links" backgroundImage={background}}>
+    <h1 class="text-3xl mt-1 code-font">WavyCat</h1>
+    <p class="max-w-100">
+        Ever-sleepy cat-girl astronaut and software engineer with experience in
+        Go, TypeScript, Python, and Kotlin.
+    </p>
+    <SocialLinks buttons={socials} />
 </Layout>
 
 <style>

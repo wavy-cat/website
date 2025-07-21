@@ -1,26 +1,48 @@
 ---
+import "../styles/global.css";
+import "@fontsource/dm-sans/latin-400.css";
+import Image from "astro/components/Image.astro";
+
 interface Props {
-	title: string
-	description: string
+    title: string;
+    description?: string;
+    backgroundImage?: ImageMetadata;
 }
 
-const {title, description} = Astro.props as Props
+const { title, description, backgroundImage } = Astro.props as Props;
 ---
 
 <!doctype html>
 <html lang="en" class="w-full h-full m-0">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <link rel="icon" type="image/webp" href="/favicon.webp"/>
-    <link rel="sitemap" href="/sitemap-index.xml"/>
-    <meta name="generator" content={Astro.generator}/>
-    <title>{title}</title>
-    <meta property="og:title" content={title}/>
-    <meta property="og:description" content={description}/>
-    <meta property="og:type" content="website"/>
-</head>
-<body class="w-full h-full m-0">
-<slot/>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/webp" href="/favicon.webp" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        {
+            description && (
+                <meta property="og:description" content={description} />
+            )
+        }
+        <meta property="og:type" content="website" />
+    </head>
+    <body class="w-full h-full m-0">
+        <div class="h-full font-sans bg-black text-white">
+        {backgroundImage && <Image
+            class="fixed top-0 left-0 min-w-full h-full w-auto blur-md object-cover"
+            src={backgroundImage}
+            alt=""
+            fetchpriority="high"
+            loading="eager"
+        />}
+            <main class="h-full flex justify-center">
+                <section class="z-10 flex flex-col items-start justify-center p-5 gap-4">
+                    <slot />
+                </section>
+            </main>
+        </div>
+    </body>
 </html>

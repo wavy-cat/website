@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "astro build && wrangler dev",
     "deploy": "wrangler deploy",
     "astro": "astro",
     "wrangler": "wrangler"
