@@ -14,9 +14,9 @@ importers:
       '@fontsource/dm-sans':
         specifier: ^5.2.6
         version: 5.2.6
-      '@fontsource/jetbrains-mono':
-        specifier: ^5.2.6
-        version: 5.2.6
+      '@fontsource/space-grotesk':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@tailwindcss/vite':
         specifier: ^4.1.11
         version: 4.1.11(vite@6.3.5(@types/node@24.1.0)(jiti@2.4.2)(lightningcss@1.30.1))
@@ -442,8 +442,8 @@ packages:
   '@fontsource/dm-sans@5.2.6':
     resolution: {integrity: sha512-3AmJcX93hqmevsC2ixNwHj3iO3sNY/YHBqGhg0MjIyfhk6aZLNv1s2HqJ6xf8yf1rXXK3yR56rzyA3O21htKkg==}
 
-  '@fontsource/jetbrains-mono@5.2.6':
-    resolution: {integrity: sha512-nz//dBr99hXZmHp10wgNI00qThWImkzRR5PQjvRM+rpmuHO5rYBJCqPPWufidCvmkkryXx/GOP/lgqsM3R3Org==}
+  '@fontsource/space-grotesk@5.2.8':
+    resolution: {integrity: sha512-8rlIzpX+lo36y0g77OlwjeBj2DPo9XOwrzqKRLHYZcWcsj73SlkVI6UdXxDCZGLO7oQti1q9QPXzMBYbzSz60w==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -2433,7 +2433,7 @@ snapshots:
 
   '@fontsource/dm-sans@5.2.6': {}
 
-  '@fontsource/jetbrains-mono@5.2.6': {}
+  '@fontsource/space-grotesk@5.2.8': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
