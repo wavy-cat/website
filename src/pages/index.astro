@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import background from '../assets/background.webp';
-import '@fontsource/space-grotesk/latin-600.css';
 import SocialLinks from "../components/SocialLinks.astro";
 import Github from "simple-icons-astro/Github";
 import Discord from "simple-icons-astro/Discord";
@@ -26,9 +25,3 @@ const socials = [
     </p>
     <SocialLinks buttons={socials} />
 </Layout>
-
-<style>
-    .space-grotest {
-        font-family: "Space Grotesk", sans-serif;
-    }
-</style>

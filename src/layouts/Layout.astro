@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import "@fontsource/dm-sans/latin-400.css";
+import "@fontsource/space-grotesk/latin-600.css";
 import Image from "astro/components/Image.astro";
 
 interface Props {
@@ -46,3 +47,9 @@ const { title, description, backgroundImage } = Astro.props as Props;
         </div>
     </body>
 </html>
+
+<style is:global>
+    .space-grotest {
+        font-family: "Space Grotesk", sans-serif;
+    }
+</style>
