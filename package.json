@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.5.1",
+    "@esbuild/linux-x64": "^0.25.9",
     "@fontsource/dm-sans": "^5.2.6",
     "@fontsource/space-grotesk": "^5.2.9",
     "@tailwindcss/vite": "^4.1.13",

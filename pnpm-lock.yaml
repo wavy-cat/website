@@ -11,6 +11,9 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.5.1
         version: 3.5.1
+      '@esbuild/linux-x64':
+        specifier: ^0.25.9
+        version: 0.25.9
       '@fontsource/dm-sans':
         specifier: ^5.2.6
         version: 5.2.6
@@ -2380,8 +2383,7 @@ snapshots:
   '@esbuild/linux-x64@0.25.4':
     optional: true
 
-  '@esbuild/linux-x64@0.25.9':
-    optional: true
+  '@esbuild/linux-x64@0.25.9': {}
 
   '@esbuild/netbsd-arm64@0.25.4':
     optional: true
