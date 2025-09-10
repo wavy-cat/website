@@ -14,14 +14,14 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.5.1",
     "@fontsource/dm-sans": "^5.2.6",
-    "@fontsource/space-grotesk": "^5.2.8",
-    "@tailwindcss/vite": "^4.1.12",
-    "astro": "^5.13.5",
+    "@fontsource/space-grotesk": "^5.2.9",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.13.7",
     "sharp": "^0.34.3",
-    "simple-icons-astro": "^15.13.0",
-    "tailwindcss": "^4.1.12"
+    "simple-icons-astro": "^15.14.0",
+    "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
-    "wrangler": "^4.33.1"
+    "wrangler": "^4.35.0"
   }
 }
