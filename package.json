@@ -6,23 +6,23 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro build && wrangler dev",
+    "preview": "astro preview",
     "deploy": "wrangler deploy",
     "astro": "astro",
     "wrangler": "wrangler"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.5.1",
-    "@esbuild/linux-x64": "^0.25.9",
-    "@fontsource/dm-sans": "^5.2.6",
-    "@fontsource/space-grotesk": "^5.2.9",
-    "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.13.7",
-    "sharp": "^0.34.3",
-    "simple-icons-astro": "^15.14.0",
-    "tailwindcss": "^4.1.13"
+    "@astrojs/sitemap": "^3.6.0",
+    "@esbuild/linux-x64": "^0.25.12",
+    "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/space-grotesk": "^5.2.10",
+    "@tailwindcss/vite": "^4.1.16",
+    "astro": "^5.15.3",
+    "sharp": "^0.34.4",
+    "simple-icons-astro": "^15.19.0",
+    "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
-    "wrangler": "^4.35.0"
+    "wrangler": "^4.45.3"
   }
 }
