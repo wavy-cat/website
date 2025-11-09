@@ -33,7 +33,7 @@ const { title, description, backgroundImage } = Astro.props as Props;
     <body class="w-full h-full m-0">
         <div class="h-full font-sans bg-black text-white">
         {backgroundImage && <Image
-            class="fixed top-0 left-0 min-w-full h-full w-auto blur-md object-cover"
+            class="fixed top-0 left-0 min-w-full h-full w-auto blur-[90px] object-cover"
             src={backgroundImage}
             alt=""
             fetchpriority="high"
