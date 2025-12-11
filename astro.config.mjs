@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://wavycat.ru',
+  site: 'https://wavycat.me',
   vite: {
     plugins: [tailwindcss()]
   },
