@@ -4,24 +4,21 @@ import background from '../assets/background.webp';
 import SocialLinks from "../components/SocialLinks.astro";
 import Github from "simple-icons-astro/Github";
 import Discord from "simple-icons-astro/Discord";
-import Wakatime from "simple-icons-astro/Wakatime";
 import Telegram from "simple-icons-astro/Telegram";
-import Steam from "simple-icons-astro/Steam";
+import Matrix from "simple-icons-astro/Matrix";
 
 const socials = [
-    { icon: Discord, url: "https://discord.com/users/613651509015740416/" },
-    { icon: Telegram, url: "https://wavycatter.t.me/" },
-    { icon: Github, url: "https://github.com/wavy-cat" },
-    { icon: Wakatime, url: "https://wakatime.com/@wavycat" },
-    { icon: Steam, url: "https://steamcommunity.com" },
+    { icon: Discord, tooltip: "@wavycat", url: "https://discord.com/users/613651509015740416/" },
+    { icon: Telegram, tooltip: "@wavycatter", url: "https://t.me/wavycatter" },
+    { icon: Matrix, tooltip: "@wavycat:matrix.qndk.fun", url: "https://matrix.to/#/@wavycat:matrix.qndk.fun" },
+    { icon: Github, tooltip: "wavy-cat", url: "https://github.com/wavy-cat" },
 ];
 ---
 
 <Layout title="WavyCat" description="Just a website with various links" backgroundImage={background}>
     <h1 class="text-3xl mt-1 space-grotest">WavyCat</h1>
-    <p class="max-w-100">
-        Ever-sleepy cat-girl astronaut and software engineer with experience in
-        Go, TypeScript, Python, and Kotlin.
+    <p>
+        Software engineer with experience in Go, TypeScript & Kotlin.
     </p>
     <SocialLinks buttons={socials} />
 </Layout>
