@@ -8,9 +8,9 @@ A personalized WavyCat's website. [View it](https://wcatie.xyz/)
 
 ![Stack](https://skillicons.dev/icons?i=astro,tailwind,cloudflare,nodejs,pnpm)
 
-* **Runtime:** Node.js 22
+* **Runtime:** Node.js
 * **Package manager:** pnpm
-* **Framework:** Astro 5
+* **Framework:** Astro
 * **Deployed on** Cloudflare Workers
 
 ## Getting started
