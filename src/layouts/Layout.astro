@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { Font } from "astro:assets";
 import Image from "astro/components/Image.astro";
+import Picture from "astro/components/Picture.astro";
 
 interface Props {
     title: string;
@@ -33,10 +34,11 @@ const { title, description, backgroundImage } = Astro.props as Props;
     </head>
     <body class="w-full h-full m-0">
         <div class="h-full font-sans bg-black text-white">
-        {backgroundImage && <Image
-            class="fixed top-0 left-0 min-w-full h-full w-auto blur-[90px] object-cover"
+        {backgroundImage && <Picture
+            class="fixed top-0 left-0 min-w-full h-full w-auto blur-[60px] object-cover"
             src={backgroundImage}
-            alt=""
+            formats={['avif', 'webp']}
+            alt="Background"
             fetchpriority="high"
             loading="eager"
         />}
