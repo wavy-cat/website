@@ -12,9 +12,9 @@
     "wrangler": "wrangler"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.1",
+    "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.0.8",
+    "astro": "^6.2.1",
     "sharp": "^0.34.5",
     "simple-icons-astro": "^15.22.0",
     "tailwindcss": "^4.2.2"
