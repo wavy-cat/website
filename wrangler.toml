@@ -1,6 +1,7 @@
 name = "website"
 compatibility_date = "2025-05-05"
-preview_urls = true
+send_metrics = false
+workers_dev = false
 
 [assets]
 directory = "./dist"
