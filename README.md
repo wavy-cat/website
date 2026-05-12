@@ -1,15 +1,14 @@
 # WavyCat's Website
 
-A personalized WavyCat's website. [View it](https://wcatie.xyz/)
+A personalized WavyCat's website. [View it](https://wavycat.me/)
 
-![Screenshot](.github/assets/screenshot.png)
+![Screenshot](.github/assets/screenshot.webp)
 
 ## Stack
 
-![Stack](https://skillicons.dev/icons?i=astro,tailwind,cloudflare,nodejs,pnpm)
+![Stack](https://skillicons.dev/icons?i=astro,tailwind,cloudflare,bun)
 
-* **Runtime:** Node.js
-* **Package manager:** pnpm
+* **Runtime:** Bun
 * **Framework:** Astro
 * **Deployed on** Cloudflare Workers
 
@@ -18,7 +17,7 @@ A personalized WavyCat's website. [View it](https://wcatie.xyz/)
 ### Run locally
 
 ```shell
-pnpm run dev
+bun run dev
 ```
 
 ### Deploy globally
@@ -26,5 +25,5 @@ pnpm run dev
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https%3A%2F%2Fgithub.com%2Fwavy-cat%2Fwebsite)
 
 ```
-pnpm run build && pnpm run deploy
+bun run build && bun run deploy
 ```
