@@ -1,8 +1,8 @@
 ---
 interface SocialButton {
-	icon: any
-	url?: string,
-	tooltip?: string,
+    social: string
+    username: string
+    url?: string
 }
 
 interface Props {
@@ -12,58 +12,8 @@ interface Props {
 const {buttons} = Astro.props as Props
 ---
 
-<section class="flex gap-4 flex-wrap">
-	{buttons.map(btn => (
-		<a href={btn.url} class="social-link-wrapper">
-			<div class="social-link transition-transform duration-150 hover:scale-105">
-				<btn.icon />
-				{btn.tooltip && (
-					<span class="tooltip">{btn.tooltip}</span>
-				)}
-			</div>
-		</a>
-	))}
-</section>
-
-<style>
-	.social-link-wrapper {
-		position: relative;
-		display: inline-block;
-	}
-
-	.social-link {
-		position: relative;
-		display: inline-block;
-	}
-
-	.tooltip {
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		transform: translateX(-50%) translateY(8px);
-		background-color: rgba(0, 0, 0, 0.8);
-		color: white;
-		padding: 6px 12px;
-		border-radius: 6px;
-		font-size: 14px;
-		white-space: nowrap;
-		pointer-events: none;
-		opacity: 0;
-		transition: opacity 0.2s ease-in-out;
-		z-index: 1000;
-	}
-
-	.tooltip::after {
-		content: '';
-		position: absolute;
-		bottom: 100%;
-		left: 50%;
-		transform: translateX(-50%);
-		border: 6px solid transparent;
-		border-bottom-color: rgba(0, 0, 0, 0.8);
-	}
-
-	.social-link:hover .tooltip {
-		opacity: 1;
-	}
-</style>
+<ul class="list-disc">
+    {buttons.map(btn => (
+        <li><b>{btn.social}:</b> <a href={btn.url}>{btn.username}</a>.</li>
+    ))}
+</ul>

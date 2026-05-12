@@ -1,22 +1,113 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import background from '../assets/background.jpg';
 import SocialLinks from "../components/SocialLinks.astro";
 import Github from "simple-icons-astro/Github";
 import Telegram from "simple-icons-astro/Telegram";
 import Matrix from "simple-icons-astro/Matrix";
+import ProjectLinks from "../components/ProjectLinks.astro";
 
 const socials = [
-    { icon: Telegram, tooltip: "@wavycatter", url: "https://t.me/wavycatter" },
-    { icon: Matrix, tooltip: "@wavycat:matrix.org", url: "https://matrix.to/#/@wavycat:matrix.org" },
-    { icon: Github, tooltip: "wavy-cat", url: "https://github.com/wavy-cat" },
+    {
+        social: "telegram",
+        username: "@wavycatter",
+        url: "https://t.me/wavycatter"
+    },
+    {
+        social: "matrix",
+        username: "@wavycat:matrix.org",
+        url: "https://matrix.to/#/@wavycat:matrix.org"
+    },
+    {
+        social: "github",
+        username: "wavy-cat",
+        url: "https://github.com/wavy-cat"
+    },
 ];
+
+const projects = [
+    {
+        name: "website",
+        description: "the Astro website you are currently visiting.",
+        links: [
+            {
+                social: "github",
+                url: "https://github.com/wavy-cat/website"
+            }
+        ]
+    },
+    {
+        name: "cat activity",
+        description: "plugin for JetBrains IDE to show your activity in your Discord profile.",
+        links: [
+            {
+                social: "marketplace",
+                url: "https://plugins.jetbrains.com/plugin/24065-cat-activity"
+            },
+            {
+                social: "github",
+                url: "https://github.com/wavy-cat/cat-activity"
+            }
+        ]
+    },
+    {
+        name: "compression station",
+        description: "implementation of RFC 9842 as a proxy server.",
+        links: [
+            {
+                social: "github",
+                url: "https://github.com/wavy-cat/compression-station"
+            }
+        ]
+    },
+    {
+        name: "totemlib",
+        description: "library to generate totems of undying for Minecraft.",
+        links: [
+            {
+                social: "docs",
+                url: "https://totemlib.wavycat.me"
+            },
+            {
+                social: "pypi",
+                url: "https://pypi.org/project/wavy-totem-lib/"
+            },
+            {
+                social: "github",
+                url: "https://github.com/wavy-cat/wavy-totem-lib"
+            }
+        ]
+    },
+    {
+        name: "doki",
+        description: "a minimalistic and fast port knocker.",
+        links: [
+            {
+                social: "github",
+                url: "https://github.com/wavy-cat/doki"
+            }
+        ]
+    },
+    {
+        name: "petpet-go",
+        description: "petpet GIF generator, written in Go.",
+        links: [
+            {
+                social: "github",
+                url: "https://github.com/wavy-cat/petpet-go"
+            }
+        ]
+    }
+]
 ---
 
-<Layout title="WavyCat" description="Just a website with various links" backgroundImage={background}>
-    <h1 class="text-3xl mt-1 space-grotest">WavyCat</h1>
+<Layout title="WavyCat" description="Just a website with various links">
+    <h1 class="text-2xl">WavyCat</h1>
     <p>
         Software engineer with experience in Go, TypeScript & Kotlin.
     </p>
     <SocialLinks buttons={socials} />
+
+    <hr class="w-full h-0.5 my-5 mx-auto bg-neutral-300 border-0">
+
+    <ProjectLinks buttons={projects} />
 </Layout>

@@ -13,8 +13,8 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.fontsource(),
-      name: "DM Sans",
-      cssVariable: "--font-dm-sans",
+      name: "Atkinson Hyperlegible",
+      cssVariable: "--font-atkinson-hyperlegible",
       weights: [400],
       styles: ["normal"],
       subsets: ["latin"],

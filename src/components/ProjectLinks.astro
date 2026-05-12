@@ -1,0 +1,29 @@
+---
+interface ProjectLink {
+    social: string
+    url: string
+}
+
+interface ProjectButton {
+    name: string
+    description: string
+    links?: ProjectLink[]
+}
+
+interface Props {
+	buttons: ProjectButton[]
+}
+
+const {buttons} = Astro.props as Props
+---
+
+<ul class="list-disc">
+     {buttons.map(btn => (
+             <li>
+                 <b>{btn.name} ({btn.links?.map((link, index) => (
+                         <>{index > 0 && ', '}
+                             <a href={link.url}>{link.social}</a></>
+                 ))}):</b> {btn.description}
+             </li>
+     ))}
+</ul>
