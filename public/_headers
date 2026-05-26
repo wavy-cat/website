@@ -6,3 +6,7 @@
 
 /favicon*
   Cache-Control: public, max-age=86400
+
+/.well-known/matrix/*
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *
