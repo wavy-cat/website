@@ -1,45 +1,19 @@
 ---
 import "../styles/global.css";
-import { Font } from "astro:assets";
-import Image from "astro/components/Image.astro";
-import Picture from "astro/components/Picture.astro";
+import Head from "./Head.astro";
 
-interface Props {
-    title: string;
-    description?: string;
-}
+type Props = Head.Props;
 
 const { title, description } = Astro.props as Props;
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/png" sizes="128x128" href="/favicon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="sitemap" href="/sitemap-index.xml" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-        <meta property="og:title" content={title} />
-        {
-            description && (
-                <meta property="og:description" content={description} />
-            )
-        }
-        <meta property="og:type" content="website" />
-        <Font cssVariable="--font-atkinson-hyperlegible" />
-        <Font cssVariable="--font-space-grotesk" />
-    </head>
-    <body>
+<Head title={title} description={description}>
     <div class="flex h-screen justify-center font-sans items-center bg-black text-white">
         <div class="flex flex-col  p-5 gap-4 max-w-120">
             <slot />
         </div>
     </div>
-    </body>
-</html>
+</Head>
 
 <style is:global>
     h1,h2,h3,h4,h5,h6 {
