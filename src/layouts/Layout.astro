@@ -1,8 +1,6 @@
 ---
 import "../styles/global.css";
-import Head from "./Head.astro";
-
-type Props = Head.Props;
+import Head, { type Props } from "./Head.astro";
 
 const { title, description } = Astro.props as Props;
 ---
