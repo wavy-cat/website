@@ -17,7 +17,7 @@ A personalized WavyCat's website. [View it](https://wavycat.me/)
 ### Run locally
 
 ```shell
-bun run dev
+bun run --bun dev
 ```
 
 ### Deploy globally
