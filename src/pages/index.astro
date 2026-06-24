@@ -8,8 +8,20 @@ import projects from "../projects";
 import avatar from "../assets/avatar.png";
 ---
 
-<Layout title="WavyCat" description="Just a website with various links">
-    <h1 class="text-2xl">WavyCat</h1>
+<Layout title="WavyCat" description="Just a developer's personal website">
+    <div class="flex items-center gap-2">
+      <Picture
+        src={avatar}
+        width="64"
+        height="64"
+        formats={['avif', 'webp']}
+        alt="My avatar"
+        class="w-8 h-8 rounded-full border border-stone-600 object-cover"
+        loading="eager"
+      />
+      <h1 class="text-2xl leading-none">WavyCat</h1>
+    </div>
+
     <p>
         Software engineer with experience in Go, TypeScript & Kotlin.
     </p>
