@@ -20,11 +20,7 @@ const { title, description } = Astro.props as Props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta property="og:title" content={title} />
-    {
-        description && (
-                    <meta property="og:description" content={description} />
-        )
-    }
+    {description && <meta property="og:description" content={description} />}
     <meta property="og:type" content="website" />
     <Font cssVariable="--font-atkinson-hyperlegible" />
     <Font cssVariable="--font-space-grotesk" />
