@@ -12,7 +12,7 @@ const projects = [
   {
     name: "cat activity",
     description:
-      "plugin for JetBrains IDE to show your activity in your Discord profile.",
+      "plugin for JetBrains IDE to show coding activity in Discord profile.",
     links: [
       {
         social: "marketplace",
@@ -64,7 +64,7 @@ const projects = [
   },
   {
     name: "petpet-go",
-    description: "petpet GIF generator, written in Go.",
+    description: "petpet gif generator by user's avatar.",
     links: [
       {
         social: "github",
