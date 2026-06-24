@@ -1,4 +1,4 @@
 @import "tailwindcss";
 @theme inline {
-    --font-sans: var(--font-atkinson-hyperlegible);
+  --font-sans: var(--font-atkinson-hyperlegible);
 }
