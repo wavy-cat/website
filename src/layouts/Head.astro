@@ -23,7 +23,7 @@ const { title, description } = Astro.props as Props;
     <meta property="og:title" content={title} />
     {description && (
       <meta property="og:description" content={description} />
-      <meta property="description" content={description} />
+      <meta name="description" content={description} />
     )}
     <Font cssVariable="--font-atkinson-hyperlegible" />
 </head>
