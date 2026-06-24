@@ -6,7 +6,7 @@ const { title, description } = Astro.props as Props;
 ---
 
 <Head title={title} description={description}>
-    <div class="flex h-screen justify-center items-center bg-black text-white">
+    <div class="grid place-items-center min-h-screen bg-black text-white">
         <main class="flex flex-col p-5 gap-4 max-w-120">
             <slot />
         </main>
