@@ -1,4 +1,56 @@
-@import "tailwindcss";
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
 @theme inline {
   --font-sans: var(--font-atkinson-hyperlegible);
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    border: 0 solid;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+  }
+
+  body,
+  h1,
+  p,
+  ul {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  img,
+  picture {
+    display: block;
+    max-width: 100%;
+  }
+
+  b,
+  strong {
+    font-weight: bolder;
+  }
 }
