@@ -4,7 +4,7 @@
 [
   {
     "label": "Run dev server",
-    "command": "bun run --bun dev",
+    "command": "pnpm run dev",
     //"args": [],
     // Env overrides for the command, will be appended to the terminal's environment from the settings.
     // "env": { "foo": "bar" },
