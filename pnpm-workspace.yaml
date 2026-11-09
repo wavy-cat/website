@@ -2,3 +2,5 @@ allowBuilds:
   esbuild: set this to true or false
   sharp: set this to true or false
   workerd: set this to true or false
+minimumReleaseAgeExclude:
+  - astro@7.4.8

@@ -13,18 +13,18 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "wrangler": "^4.101.0"
+    "wrangler": "^4.158.0"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@astrojs/sitemap": "3.7.3",
-    "@tailwindcss/vite": "^4.3.1",
-    "astro": "7.0.2",
+    "@astrojs/check": "0.9.12",
+    "@astrojs/sitemap": "3.7.4",
+    "@tailwindcss/vite": "^4.3.5",
+    "astro": "7.4.8",
     "astro-robots-txt": "^1.0.0",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.3.1"
+    "tailwindcss": "^4.3.5"
   }
 }
