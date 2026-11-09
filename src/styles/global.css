@@ -40,7 +40,12 @@
 
   a {
     color: inherit;
-    text-decoration: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  a:hover {
+      text-decoration-thickness: 2px;
   }
 
   img,
